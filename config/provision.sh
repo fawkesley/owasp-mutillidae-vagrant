@@ -58,6 +58,11 @@ pull_latest_multillidae() {
   git pull
 }
 
+show_message() {
+  echo
+  echo "Now browse to http://localhost:8080/multillidae/set-up-database.php"
+}
+
 # apt_update
 install_apache
 tweak_apache_dir_conf
@@ -67,3 +72,4 @@ install_phpinfo
 test_php
 # pull_latest_multillidae
 install_multillidae
+show_message
