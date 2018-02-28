@@ -1,6 +1,6 @@
 # OWASP Mutillidae 2 Vagrant
 
-Vagrant config to configure an Ubuntu 16.04 virtual machine and install OWASP Mutillidae 2.
+Vagrant config to configure an Ubuntu 16.04 virtual machine and install [OWASP Mutillidae 2](https://sourceforge.net/projects/mutillidae/files/), a deliberately vulnerable PHP web application.
 
 ## Requirements
 
