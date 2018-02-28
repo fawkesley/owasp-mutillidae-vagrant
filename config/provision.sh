@@ -40,7 +40,11 @@ install_phpinfo() {
 }
 
 test_php() {
-  RESULT="$(curl http://localhost/phpinfo.php)"
+  curl http://localhost/phpinfo.php |grep PHP
+  if [ $? -ne 0 ]; then
+    echo "Problem with phpinfo.php..."
+    exit 1
+  fi
 }
 
 install_multillidae() {
