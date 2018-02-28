@@ -48,8 +48,8 @@ test_php() {
 }
 
 install_multillidae() {
-  rm -rf /var/www/multillidae
-  cp -R /vagrant/external/multillidae /var/www/multillidae
+  rm -rf /var/www/html/multillidae
+  cp -R /vagrant/external/multillidae /var/www/html/multillidae
 }
 
 
