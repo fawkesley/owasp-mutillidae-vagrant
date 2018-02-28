@@ -18,5 +18,6 @@ git clone https://github.com/paulfurley/owasp-multillidae-vagrant && cd owasp-mu
 Invoke vagrant to create and provision the box:
 
 ```
+mkdir -p ~/.cache/vagrant-apt-archives
 vagrant up
 ```
