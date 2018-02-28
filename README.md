@@ -21,3 +21,5 @@ Invoke vagrant to create and provision the box:
 mkdir -p ~/.cache/vagrant-apt-archives
 vagrant up
 ```
+
+Connect to [http://localhost:8080/multillidae](http://localhost:8080/multillidae)
