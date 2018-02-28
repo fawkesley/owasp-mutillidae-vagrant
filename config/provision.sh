@@ -25,8 +25,8 @@ tweak_apache_dir_conf() {
 }
 
 install_mysql() {
-  echo "mysql-server-5.5 mysql-server/root_password password ROOTPASSWORD" | debconf-set-selections
-  echo "mysql-server-5.5 mysql-server/root_password_again password ROOTPASSWORD" | debconf-set-selections
+  echo "mysql-server-5.5 mysql-server/root_password password \"''\"" | debconf-set-selections
+  echo "mysql-server-5.5 mysql-server/root_password_again password \"''\"" | debconf-set-selections
   apt install -y mysql-server libapache2-mod-auth-mysql php5-mysql
   mysql_install_db
 }
