@@ -15,6 +15,10 @@ apt_update() {
   echo
 }
 
+install_git() {
+  apt install -y git
+}
+
 install_apache() {
   apt install -y apache2 apache2-utils
 }
@@ -47,29 +51,39 @@ test_php() {
   fi
 }
 
+pull_latest_multillidae() {
+  GIT_REPO="git://git.code.sf.net/p/mutillidae/git"
+
+  if [ ! -d "/vagrant/external/multillidae" ]; then
+    cd /vagrant/external
+    git clone "${GIT_REPO}" multillidae
+  else
+    cd /vagrant/external/multillidae
+    git remote set-url origin "${GIT_REPO}"
+    git fetch
+    git checkout master
+    git reset --hard origin/master
+  fi
+}
+
 install_multillidae() {
   rm -rf /var/www/html/multillidae
   cp -R /vagrant/external/multillidae /var/www/html/multillidae
 }
 
 
-pull_latest_multillidae() {
-  cd /vagrant/external/multillidae
-  git pull
-}
-
 show_message() {
   echo
   echo "Now browse to http://localhost:8080/multillidae/set-up-database.php"
 }
 
-# apt_update
+install_git
 install_apache
 tweak_apache_dir_conf
 install_mysql
 install_php_5
 install_phpinfo
 test_php
-# pull_latest_multillidae
+pull_latest_multillidae
 install_multillidae
 show_message
