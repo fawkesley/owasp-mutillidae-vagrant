@@ -32,7 +32,7 @@ install_mysql() {
 }
 
 install_php_5() {
-  sudo apt-get install php5 php5-mysql php-pear php5-gd  php5-mcrypt php5-curl
+  sudo apt-get install -y php5 php5-mysql php-pear php5-gd  php5-mcrypt php5-curl
 }
 
 install_phpinfo() {
