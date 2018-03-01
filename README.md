@@ -12,7 +12,7 @@ Vagrant config to configure an Ubuntu 16.04 virtual machine and install [OWASP M
 Get this repo
 
 ```
-git clone https://github.com/paulfurley/owasp-multillidae-vagrant && cd owasp-multillidae-vagrant
+git clone https://github.com/paulfurley/owasp-mutillidae-vagrant && cd owasp-mutillidae-vagrant
 ```
 
 Invoke vagrant to create and provision the box:
@@ -22,4 +22,4 @@ mkdir -p ~/.cache/vagrant-apt-archives
 vagrant up
 ```
 
-Connect to [http://localhost:8080/multillidae](http://localhost:8080/multillidae)
+Connect to [http://localhost:8080/mutillidae](http://localhost:8080/mutillidae)

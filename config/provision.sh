@@ -51,14 +51,14 @@ test_php() {
   fi
 }
 
-pull_latest_multillidae() {
+pull_latest_mutillidae() {
   GIT_REPO="git://git.code.sf.net/p/mutillidae/git"
 
-  if [ ! -d "/vagrant/external/multillidae" ]; then
+  if [ ! -d "/vagrant/external/mutillidae" ]; then
     cd /vagrant/external
-    git clone "${GIT_REPO}" multillidae
+    git clone "${GIT_REPO}" mutillidae
   else
-    cd /vagrant/external/multillidae
+    cd /vagrant/external/mutillidae
     git remote set-url origin "${GIT_REPO}"
     git fetch
     git checkout master
@@ -66,15 +66,15 @@ pull_latest_multillidae() {
   fi
 }
 
-install_multillidae() {
-  rm -rf /var/www/html/multillidae
-  cp -R /vagrant/external/multillidae /var/www/html/multillidae
+install_mutillidae() {
+  rm -rf /var/www/html/mutillidae
+  cp -R /vagrant/external/mutillidae /var/www/html/mutillidae
 }
 
 
 show_message() {
   echo
-  echo "Now browse to http://localhost:8080/multillidae/set-up-database.php"
+  echo "Now browse to http://localhost:8080/mutillidae/set-up-database.php"
 }
 
 install_git
@@ -84,6 +84,6 @@ install_mysql
 install_php_5
 install_phpinfo
 test_php
-pull_latest_multillidae
-install_multillidae
+pull_latest_mutillidae
+install_mutillidae
 show_message
